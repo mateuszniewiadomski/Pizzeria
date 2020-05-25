@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE pizzeria SYSTEM "database.dtd">
+<pizzeria>
+    <pizza id="pizza_1" dough="thin" info="v">
+        <name>Margherita</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>oregano</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">15.50</small>
+            <large size="large">21.00</large>
+            <mega size="mega">35.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_2" dough="thin" info="v">
+        <name>Pomodoro</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>tomato</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">16.50</small>
+            <large size="large">21.50</large>
+            <mega size="mega">38.00</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_3" dough="thin">
+        <name>Napoli</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>ham</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">17.50</small>
+            <large size="large">22.50</large>
+            <mega size="mega">40.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_4" dough="thin">
+        <name>Salami</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>salami</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">17.50</small>
+            <large size="large">22.50</large>
+            <mega size="mega">40.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_5" dough="thin">
+        <name>Hawaii</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>ham</ingredient>
+            <ingredient>pineapple</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">18.50</small>
+            <large size="large">23.50</large>
+            <mega size="mega">42.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_6" dough="thin">
+        <name>Capricciosa</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>ham</ingredient>
+            <ingredient>mushrooms</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">18.50</small>
+            <large size="large">23.50</large>
+            <mega size="mega">42.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_7" dough="thin">
+        <name>Sportiva</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>susages</ingredient>
+            <ingredient>onion</ingredient>
+            <ingredient>mushrooms</ingredient>
+            <ingredient>cucumber</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">20.50</small>
+            <large size="large">25.50</large>
+            <mega size="mega">48.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_8" dough="thin" info="vs">
+        <name>Fuoco</name>
+        <sauces>
+            <sauce>normal</sauce>
+            <sauce>tabasco</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>ham</ingredient>
+            <ingredient>onion</ingredient>
+            <ingredient>mushrooms</ingredient>
+            <ingredient>pepperoni pepper</ingredient>
+            <ingredient>chilli</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">21.50</small>
+            <large size="large">26.50</large>
+            <mega size="mega">50.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_9" dough="thin" info="s">
+        <name>Mexico</name>
+        <sauces>
+            <sauce>normal</sauce>
+            <sauce>tabasco</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>gyros</ingredient>
+            <ingredient>onion</ingredient>
+            <ingredient>red kidney bean</ingredient>
+            <ingredient>pepperoni pepper</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">21.50</small>
+            <large size="large">26.50</large>
+            <mega size="mega">50.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_10" dough="thin">
+        <name>Parma</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>sausage</ingredient>
+            <ingredient>bacon</ingredient>
+            <ingredient>garlic</ingredient>
+            <ingredient>tomato</ingredient>
+            <ingredient>egg</ingredient>
+            <ingredient>pepper</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">21.50</small>
+            <large size="large">26.50</large>
+            <mega size="mega">50.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_11" dough="thin" info="s">
+        <name>Salute</name>
+        <sauces>
+            <sauce>normal</sauce>
+            <sauce>tabasco</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>sausage</ingredient>
+            <ingredient>porc</ingredient>
+            <ingredient>onion</ingredient>
+            <ingredient>pepper</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">21.50</small>
+            <large size="large">26.50</large>
+            <mega size="mega">50.50</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_12" dough="thin">
+        <name>Wiejska</name>
+        <sauces>
+            <sauce>normal</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>sausage</ingredient>
+            <ingredient>chicken</ingredient>
+            <ingredient>pork</ingredient>
+            <ingredient>mushrooms</ingredient>
+            <ingredient>onion</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">22.00</small>
+            <large size="large">27.00</large>
+            <mega size="mega">51.00</mega>
+        </price>
+    </pizza>
+
+    <pizza id="pizza_13" dough="thin" info="vs">
+        <name>Diavollo</name>
+        <sauces>
+            <sauce>normal</sauce>
+            <sauce>tabasco</sauce>
+        </sauces>
+        <ingredients>
+            <ingredient>cheese</ingredient>
+            <ingredient>salami</ingredient>
+            <ingredient>onion</ingredient>
+            <ingredient>pepper</ingredient>
+            <ingredient>pepperoni pepper</ingredient>
+            <ingredient>olives</ingredient>
+        </ingredients>
+        <price currency="PLN">
+            <small size="small">21.50</small>
+            <large size="large">26.50</large>
+            <mega size="mega">50.50</mega>
+        </price>
+    </pizza>
+
+    <diameter size="small" units="cm">30</diameter>
+    <diameter size="large" units="cm">40</diameter>
+    <diameter size="mega" units="cm">50</diameter>
+
+    <extra_info info="v">vegetarian</extra_info>
+    <extra_info info="s">spicy</extra_info>
+    <extra_info info="vs">very spicy</extra_info>
+
+</pizzeria>
+
+<!-- 
+    pizza data form: 
+    http://krokodyl.gda.pl/wp-content/uploads/2020/01/krokodyl-01-2020-en.pdf
+-->

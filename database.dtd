@@ -1,0 +1,44 @@
+<?xml encoding="UTF-8"?>
+
+<!-- PIZZERIA -->
+
+<!ELEMENT pizzeria (pizza+, diameter+, extra_info*)>
+
+<!-- PIZZA -->
+
+<!ELEMENT pizza (name, sauces, ingredients, price)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT sauces (sauce+)>
+<!ELEMENT ingredients (ingredient+)>
+<!ELEMENT price (small, large, mega)>
+
+<!ELEMENT sauce (#PCDATA)>
+
+<!ELEMENT ingredient (#PCDATA)>
+
+<!ELEMENT small (#PCDATA)>
+<!ELEMENT large (#PCDATA)>
+<!ELEMENT mega (#PCDATA)>
+
+<!ATTLIST pizza id ID #REQUIRED>
+<!ATTLIST pizza dough CDATA #REQUIRED>
+<!ATTLIST pizza info IDREF #IMPLIED>
+
+<!ATTLIST price currency CDATA #REQUIRED>
+
+<!ATTLIST small size IDREF #REQUIRED>
+<!ATTLIST large size IDREF #REQUIRED>
+<!ATTLIST mega size IDREF #REQUIRED>
+
+<!-- DIAMETER -->
+
+<!ELEMENT diameter (#PCDATA)>
+
+<!ATTLIST diameter size ID #REQUIRED>
+<!ATTLIST diameter units CDATA #REQUIRED>
+
+<!-- EXTRA_INFO -->
+
+<!ELEMENT extra_info (#PCDATA)>
+<!ATTLIST extra_info info ID #REQUIRED>
