@@ -1,0 +1,163 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+pizzeria {
+    background: #f2f2f2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    max-width: 70%;
+    font-size: 30px;
+}
+
+pizza {
+    display: block;
+    margin : 10px;
+    padding: 10px;
+    float: left;
+    width: 200px;
+    height: 250px;
+    color: #333333;
+    font-size: 18px;
+    border: solid 2px;
+    border-color: #009933;
+}
+
+pizza[info="vs"] {
+    border-color: #ff1a1a;
+}
+
+pizza[info="v"] {
+    border-color: #1aff1a;
+}
+
+pizza[info="s"] {
+    border-color: #ff751a;
+}
+
+sauces {
+    padding: 5px;
+    display: block;
+    margin: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+ingredients {
+    padding: 5px;
+    display: block;
+    margin: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+price {
+    padding: 5px;
+    display: block;
+    margin: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+small {
+    padding: 5px;
+    display: block;
+    margin: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+large {
+    padding: 5px;
+    display: block;
+    margin: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+mega {
+    padding: 5px;
+    display: block;
+    margin: 5px;
+    text-align: left;
+    font-size: 14px;
+}
+
+sauces::before {
+    content: "Sauces: "
+}
+
+sauce:not(:first-child)::before {
+    content: ", ";
+}
+
+ingredients::before {
+    content: "Ingredients: "
+}
+
+ingredient:not(:first-child)::before {
+    content: ", ";
+}
+
+price::before {
+    content: "Price: ";
+}
+
+small::before {
+    content: " - Small: ";
+}
+
+large::before {
+    content: " - Large: ";
+}
+
+mega::before {
+    content: " - Mega: ";
+}
+
+small::after {
+    content: " PLN";
+}
+
+large::after {
+    content: " PLN";
+}
+
+mega::after {
+    content: " PLN";
+}
+
+pizzeria::before {
+    content: "MENU";
+    padding-left: 40%;
+    padding-right: 60%;
+}
+
+pizza[info="v"]::before {
+    content: "(vegetarian) ";
+    color: #1aff1a;
+}
+
+
+pizza[info="s"]::before {
+    content: "(spicy) ";
+    color: #ff751a;
+
+}
+
+pizza[info="vs"]::before {
+    content: "(very spicy) ";
+    color: #ff1a1a;
+}
+
+diameter {
+    display: none;
+}
+
+extra_info {
+    display: none;
+}

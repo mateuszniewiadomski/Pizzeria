@@ -18,7 +18,7 @@
         </price>
     </pizza>
 
-    <pizza id="pizza_2" dough="thin" info="v">
+    <pizza id="pizza_2" dough="thick" info="v">
         <name>Pomodoro</name>
         <sauces>
             <sauce>normal</sauce>
@@ -66,7 +66,7 @@
         </price>
     </pizza>
 
-    <pizza id="pizza_5" dough="thin">
+    <pizza id="pizza_5" dough="thick">
         <name>Hawaii</name>
         <sauces>
             <sauce>normal</sauce>
@@ -160,7 +160,7 @@
         </price>
     </pizza>
 
-    <pizza id="pizza_10" dough="thin">
+    <pizza id="pizza_10" dough="thick">
         <name>Parma</name>
         <sauces>
             <sauce>normal</sauce>
@@ -201,7 +201,7 @@
         </price>
     </pizza>
 
-    <pizza id="pizza_12" dough="thin">
+    <pizza id="pizza_12" dough="thick">
         <name>Wiejska</name>
         <sauces>
             <sauce>normal</sauce>
@@ -253,6 +253,8 @@
 </pizzeria>
 
 <!-- 
+
     pizza data form: 
     http://krokodyl.gda.pl/wp-content/uploads/2020/01/krokodyl-01-2020-en.pdf
+
 -->
