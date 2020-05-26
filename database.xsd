@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:element name="pizzeria">
+  
+  <!-- global path -->
+  
+  <xsd:element name="pizzeria">
     <xsd:complexType>
       <xsd:sequence>
+
+        <!-- pizza -->
         <xsd:element name="pizza" maxOccurs="unbounded" minOccurs="0">
           <xsd:complexType>
             <xsd:sequence>
+
+            <!-- pizza name -->
               <xsd:element name="name">
                 <xsd:simpleType>
                   <xsd:restriction base="xsd:string">
@@ -14,6 +21,8 @@
                   </xsd:restriction>
                 </xsd:simpleType>
               </xsd:element>
+
+              <!-- sauces -->
               <xsd:element name="sauces">
                 <xsd:complexType>
                   <xsd:sequence>
@@ -28,6 +37,8 @@
                   </xsd:sequence>
                 </xsd:complexType>
               </xsd:element>
+
+              <!-- ingredients -->
               <xsd:element name="ingredients">
                 <xsd:complexType>
                   <xsd:sequence>
@@ -61,9 +72,13 @@
                   </xsd:sequence>
                 </xsd:complexType>
               </xsd:element>
+
+              <!-- price -->
               <xsd:element name="price">
                 <xsd:complexType>
                   <xsd:sequence>
+
+                    <!-- price of small -->
                     <xsd:element name="small">
                       <xsd:complexType>
                         <xsd:simpleContent>
@@ -79,6 +94,8 @@
                         </xsd:simpleContent>
                       </xsd:complexType>
                     </xsd:element>
+
+                    <!-- price of large -->
                     <xsd:element name="large">
                       <xsd:complexType>
                         <xsd:simpleContent>
@@ -94,6 +111,8 @@
                         </xsd:simpleContent>
                       </xsd:complexType>
                     </xsd:element>
+
+                    <!-- price of mega -->
                     <xsd:element name="mega">
                       <xsd:complexType>
                         <xsd:simpleContent>
@@ -110,16 +129,23 @@
                       </xsd:complexType>
                     </xsd:element>
                   </xsd:sequence>
+
+                  <!-- currency -->
                   <xsd:attribute name="currency" use="required">
                     <xsd:simpleType>
                       <xsd:restriction base="xsd:string">
                         <xsd:enumeration value="PLN"/>
+                        <xsd:enumeration value="USD"/>
                       </xsd:restriction>
                     </xsd:simpleType>
                   </xsd:attribute>
                 </xsd:complexType>
               </xsd:element>
             </xsd:sequence>
+
+            <!-- pizza attributes -->
+
+            <!-- pizza id -->
             <xsd:attribute name="id" use="required">
               <xsd:simpleType>
                 <xsd:restriction base="xsd:string">
@@ -127,6 +153,8 @@
                 </xsd:restriction>
               </xsd:simpleType>
             </xsd:attribute>
+
+            <!-- pizza dough -->
             <xsd:attribute name="dough" use="required">
               <xsd:simpleType>
                 <xsd:restriction base="xsd:string">
@@ -135,6 +163,8 @@
                 </xsd:restriction>
               </xsd:simpleType>
             </xsd:attribute>
+
+            <!-- pizza extra info -->
             <xsd:attribute name="info" use="optional">
               <xsd:simpleType>
                 <xsd:restriction base="xsd:string">
@@ -146,6 +176,8 @@
             </xsd:attribute>
           </xsd:complexType>
         </xsd:element>
+
+        <!-- diameter attribute -->
         <xsd:element name="diameter" maxOccurs="unbounded" minOccurs="0">
           <xsd:complexType>
             <xsd:simpleContent>
@@ -164,6 +196,8 @@
             </xsd:simpleContent>
           </xsd:complexType>
         </xsd:element>
+
+        <!-- extra_info attribute -->
         <xsd:element name="extra_info" maxOccurs="unbounded" minOccurs="0">
           <xsd:complexType>
             <xsd:simpleContent>
@@ -175,23 +209,37 @@
         </xsd:element>
       </xsd:sequence>
     </xsd:complexType>
+    
+    <!-- keys -->
+
+    <!-- size key -->
     <xsd:key name="size_key">
       <xsd:selector xpath="pizzeria/pizza/price"/>
       <xsd:field xpath="@size"/>
     </xsd:key>
+
+    <!-- size key ref -->
     <xsd:keyref name="size_keyref" refer="size_key">
       <xsd:selector xpath="pizzeria/diameter"/>
       <xsd:field xpath="@size"/>
     </xsd:keyref>
+
+    <!-- info key -->
     <xsd:key name="info_key">
       <xsd:selector xpath="pizzeria/pizza"/>
       <xsd:field xpath="@info"/>
     </xsd:key>
+
+    <!-- info key ref -->
     <xsd:keyref name="info_keyref" refer="info_key">
       <xsd:selector xpath="pizzeria/extra_info"/>
       <xsd:field xpath="@info"/>
     </xsd:keyref>
   </xsd:element>
+
+  <!-- extensions -->
+
+  <!-- diamater -->
   <xsd:simpleType name="diameter_ext">
     <xsd:restriction base="xsd:double">
       <xsd:enumeration value="30"/>
@@ -199,6 +247,8 @@
       <xsd:enumeration value="50"/>
     </xsd:restriction>
   </xsd:simpleType>
+
+    <!-- extra_info -->
   <xsd:simpleType name="extra_info_ext">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="vegetarian"/>
