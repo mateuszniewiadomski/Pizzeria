@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="pizzeria">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="pizza" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="name">
+                <xsd:simpleType>
+                  <xsd:restriction base="xsd:string">
+                    <xsd:minLength value="3"/>
+                    <xsd:maxLength value="30"/>
+                  </xsd:restriction>
+                </xsd:simpleType>
+              </xsd:element>
+              <xsd:element name="sauces">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="sauce" maxOccurs="unbounded" minOccurs="1">
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:enumeration value="normal"/>
+                          <xsd:enumeration value="tabasco"/>
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="ingredients">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ingredient" maxOccurs="unbounded" minOccurs="1">
+                      <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                          <xsd:enumeration value="cheese"/>
+                          <xsd:enumeration value="oregano"/>
+                          <xsd:enumeration value="tomato"/>
+                          <xsd:enumeration value="ham"/>
+                          <xsd:enumeration value="salami"/>
+                          <xsd:enumeration value="pineapple"/>
+                          <xsd:enumeration value="mushrooms"/>
+                          <xsd:enumeration value="sausages"/>
+                          <xsd:enumeration value="onion"/>
+                          <xsd:enumeration value="cucumber"/>
+                          <xsd:enumeration value="pepperoni pepper"/>
+                          <xsd:enumeration value="chilli"/>
+                          <xsd:enumeration value="gyros"/>
+                          <xsd:enumeration value="red kidney bean"/>
+                          <xsd:enumeration value="bacon"/>
+                          <xsd:enumeration value="garlic"/>
+                          <xsd:enumeration value="egg"/>
+                          <xsd:enumeration value="pepper"/>
+                          <xsd:enumeration value="porc"/>
+                          <xsd:enumeration value="chicken"/>
+                          <xsd:enumeration value="olives"/>
+                        </xsd:restriction>
+                      </xsd:simpleType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="price">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="small">
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:extension base="xsd:float">
+                            <xsd:attribute name="size" use="required">
+                              <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                  <xsd:enumeration value="small"/>
+                                </xsd:restriction>
+                              </xsd:simpleType>
+                            </xsd:attribute>
+                          </xsd:extension>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="large">
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:extension base="xsd:float">
+                            <xsd:attribute name="size" use="required">
+                              <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                  <xsd:enumeration value="large"/>
+                                </xsd:restriction>
+                              </xsd:simpleType>
+                            </xsd:attribute>
+                          </xsd:extension>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="mega">
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:extension base="xsd:float">
+                            <xsd:attribute name="size" use="required">
+                              <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                  <xsd:enumeration value="mega"/>
+                                </xsd:restriction>
+                              </xsd:simpleType>
+                            </xsd:attribute>
+                          </xsd:extension>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="currency" use="required">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="PLN"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:attribute>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="id" use="required">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:pattern value="pizza_[0-9]+"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="dough" use="required">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="thin"/>
+                  <xsd:enumeration value="thick"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="info" use="optional">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="v"/>
+                  <xsd:enumeration value="s"/>
+                  <xsd:enumeration value="vs"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:attribute>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="diameter" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="diameter_ext">
+                <xsd:attribute name="size" use="required" type="xsd:string"/>
+                <xsd:attribute name="units" use="required">
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:enumeration value="cm"/>
+                      <xsd:enumeration value="m"/>
+                      <xsd:enumeration value="mm"/>
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:attribute>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="extra_info" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:simpleContent>
+              <xsd:extension base="extra_info_ext">
+                <xsd:attribute name="info" use="required" type="xsd:string"/>
+              </xsd:extension>
+            </xsd:simpleContent>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+    <xsd:key name="size_key">
+      <xsd:selector xpath="pizzeria/pizza/price"/>
+      <xsd:field xpath="@size"/>
+    </xsd:key>
+    <xsd:keyref name="size_keyref" refer="size_key">
+      <xsd:selector xpath="pizzeria/diameter"/>
+      <xsd:field xpath="@size"/>
+    </xsd:keyref>
+    <xsd:key name="info_key">
+      <xsd:selector xpath="pizzeria/pizza"/>
+      <xsd:field xpath="@info"/>
+    </xsd:key>
+    <xsd:keyref name="info_keyref" refer="info_key">
+      <xsd:selector xpath="pizzeria/extra_info"/>
+      <xsd:field xpath="@info"/>
+    </xsd:keyref>
+  </xsd:element>
+  <xsd:simpleType name="diameter_ext">
+    <xsd:restriction base="xsd:double">
+      <xsd:enumeration value="30"/>
+      <xsd:enumeration value="40"/>
+      <xsd:enumeration value="50"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="extra_info_ext">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="vegetarian"/>
+      <xsd:enumeration value="spicy"/>
+      <xsd:enumeration value="very spicy"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

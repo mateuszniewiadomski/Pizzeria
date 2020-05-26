@@ -107,7 +107,7 @@
         </sauces>
         <ingredients>
             <ingredient>cheese</ingredient>
-            <ingredient>susages</ingredient>
+            <ingredient>sausages</ingredient>
             <ingredient>onion</ingredient>
             <ingredient>mushrooms</ingredient>
             <ingredient>cucumber</ingredient>
@@ -167,7 +167,7 @@
         </sauces>
         <ingredients>
             <ingredient>cheese</ingredient>
-            <ingredient>sausage</ingredient>
+            <ingredient>sausages</ingredient>
             <ingredient>bacon</ingredient>
             <ingredient>garlic</ingredient>
             <ingredient>tomato</ingredient>
@@ -189,7 +189,7 @@
         </sauces>
         <ingredients>
             <ingredient>cheese</ingredient>
-            <ingredient>sausage</ingredient>
+            <ingredient>sausages</ingredient>
             <ingredient>porc</ingredient>
             <ingredient>onion</ingredient>
             <ingredient>pepper</ingredient>
@@ -208,9 +208,9 @@
         </sauces>
         <ingredients>
             <ingredient>cheese</ingredient>
-            <ingredient>sausage</ingredient>
+            <ingredient>sausages</ingredient>
             <ingredient>chicken</ingredient>
-            <ingredient>pork</ingredient>
+            <ingredient>porc</ingredient>
             <ingredient>mushrooms</ingredient>
             <ingredient>onion</ingredient>
         </ingredients>
