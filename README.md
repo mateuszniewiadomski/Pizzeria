@@ -1,6 +1,6 @@
 # Pizzeria - CRUD using JavaScript
 
-![Mane Interface](img.jpg)
+![Mane Interface](img.JPG)
 
 ## Project includes
 - simple XML database
