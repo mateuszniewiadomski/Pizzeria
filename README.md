@@ -9,3 +9,6 @@
 - XSD file that validate XML database
 - XSL file that generates HTML code 
 - JavaScript CRUD 
+
+## Preview
+https://htmlpreview.github.io/?https://github.com/mateuszniewiadomski/Pizzeria/blob/master/database.html
