@@ -11,4 +11,4 @@
 - JavaScript CRUD 
 
 ## Preview
-https://htmlpreview.github.io/?https://github.com/mateuszniewiadomski/Pizzeria/blob/master/database.html
+http://mniewiadomski.rf.gd/src/Files/2020/database.html
